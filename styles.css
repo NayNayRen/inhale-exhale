@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@keyframes inhale {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes exhale {
+  from {
+    transform: scale(1.2);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  -ms-flex-align: center;
+  -ms-flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  align-items: center;
+  background-attachment: fixed;
+  background-color: #000;
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)), url('img/bg-panoramic.jpg');
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)), url('img/bg-panoramic.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)), url('img/bg-panoramic.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
+.circle {
+  background-color: #100328;
+  border-radius: 50%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.circle-gradient {
+  -webkit-box-shadow: 0 0 15px #000;
+  background: conic-gradient(#8C3164 0%,
+      #8C3164 40%,
+      #587A96 40%,
+      #587A96 60%,
+      #75609E 60%,
+      #75609E 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 15px #000;
+  height: 320px;
+  left: -10px;
+  position: absolute;
+  top: -10px;
+  width: 320px;
+  z-index: -2;
+}
+
+.container {
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+  -webkit-transform: scale(1);
+  align-items: center;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  transform: scale(1);
+  width: 300px;
+}
+
+.container.exhale {
+  -webkit-animation: exhale 3s ease-in-out forwards;
+  animation: exhale 3s ease-in-out forwards;
+}
+
+.container.inhale {
+  -webkit-animation: inhale 3s ease-in-out forwards;
+  animation: inhale 3s ease-in-out forwards;
+}
+
+.credits {
+  color: #fff;
+  display: block;
+  font-size: 14px;
+}
+
+.credits a {
+  -webkit-transition: opacity 150ms ease;
+  color: #587A96;
+  text-decoration: none;
+  transition: opacity 150ms ease;
+}
+
+.credits a:hover {
+  opacity: 0.75;
+}
+
+.footer {
+  padding-bottom: 5px;
+  text-align: center;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+.pointer {
+  -webkit-box-shadow: 0 0 5px #000;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #000;
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+
+.pointer-container {
+  -webkit-animation: rotate 8.75s linear forwards infinite;
+  -webkit-transform-origin: bottom center;
+  animation: rotate 9s linear forwards infinite;
+  height: 190px;
+  /* centered to gradien-circle */
+  left: 140px;
+  /* centered to gradien-circle */
+  position: absolute;
+  top: -40px;
+  /* outside edge of gradient-circle*/
+  transform-origin: bottom center;
+  width: 20px;
+}
+
+#text {
+  -webkit-transition: color 500ms ease;
+  color: #8C3164;
+  font-size: 18px;
+  transition: color 500ms ease;
+}
+
+@media(max-width: 700px) {
+  body {
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url('img/bg-landscape.jpg');
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url('img/bg-landscape.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url('img/bg-landscape.jpg');
+  }
+
+  .circle-gradient {
+    height: 215px;
+    width: 215px;
+  }
+
+  .container {
+    height: 195px;
+    width: 195px;
+  }
+
+  .credits {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .pointer {
+    height: 10px;
+    width: 10px;
+  }
+
+  .pointer-container {
+    top: -22px;
+    /* outside edge of gradient-circle*/
+    left: 93px;
+    /* centered to gradien-circle */
+    width: 10px;
+    height: 120px;
+    /* centered to gradien-circle */
+  }
+
+  #text{
+    font-size: 16px;
+  }
+}
