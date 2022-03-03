@@ -1,1 +1,1 @@
-This is a project could be used to help breathe and relax. Minor mods were made from the original creation to extend the total total of the exercise, account for mobile use, color scheme and background.
+This is a project could be used to help breathe and relax. Minor mods were made from the original creation, built by Brad Traversy of Traversy Media, to extend the total total of the exercise, account for mobile use, color scheme and background.
