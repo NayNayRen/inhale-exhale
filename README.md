@@ -1,1 +1,9 @@
-This is a project could be used to help breathe and relax. Minor mods were made from the original creation, built by Brad Traversy of Traversy Media, to extend the total total of the exercise, account for mobile use, color scheme and background.
+This is a project that could be used to help breathing and relaxation.
+
+Modifications were made from the original creation, built by Brad Traversy of Traversy Media, when following along in a titorial.
+
+I also added responsive media queries for multiple screen sizes, and switched up the color scheme.
+
+The stack used is HTML, CSS and vanilla Javascript.
+
+I appreciate you stopping by.
