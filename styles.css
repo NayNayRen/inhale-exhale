@@ -2,64 +2,38 @@
 
 @keyframes inhale {
   from {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
 
   to {
+    -webkit-transform: scale(1.2);
     transform: scale(1.2);
   }
 }
 
 @keyframes exhale {
   from {
+    -webkit-transform: scale(1.2);
     transform: scale(1.2);
   }
 
   to {
+    -webkit-transform: scale(1);
     transform: scale(1);
   }
 }
 
 @keyframes rotate {
   from {
+    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
   }
 
   to {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
-}
-
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-body {
-  -ms-flex-align: center;
-  -ms-flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  align-items: center;
-  background-attachment: fixed;
-  background-color: #000;
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)), url('img/bg-panoramic.jpg');
-  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)), url('img/bg-panoramic.jpg');
-  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)), url('img/bg-panoramic.jpg');
-  background-position: center;
-  background-size: cover;
-  color: #fff;
-  display: -ms-flexbox;
-  display: -webkit-box;
-  display: flex;
-  flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  min-height: 100vh;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
 }
 
 .circle {
@@ -107,6 +81,7 @@ body {
   position: relative;
   transform: scale(1);
   width: 300px;
+  /* outline: solid 1px blue; */
 }
 
 .container.exhale {
@@ -137,19 +112,45 @@ body {
 }
 
 .footer {
-  padding-bottom: 5px;
+  background-color: #000;
+  padding: 25px 10px;
   text-align: center;
-}
-
-html {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  width: 100%;
+  width: 100%
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 34px;
+  padding: 25px 0;
+}
+
+.main {
+  -ms-flex-align: center;
+  -ms-flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  align-items: center;
+  background-attachment: fixed;
+  background-color: #000;
+  background-image: -webkit-gradient(linear,
+      left bottom, left top,
+      from(rgba(0, 0, 0, 0)),
+      to(rgba(0, 0, 0, 1))),
+    url('img/bg-panoramic.jpg');
+  background-image: linear-gradient(0deg,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1)),
+    url('img/bg-panoramic.jpg');
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100%;
+  position: relative;
 }
 
 .pointer {
@@ -185,11 +186,6 @@ h1 {
 }
 
 @media(max-width: 700px) {
-  body {
-    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url('img/bg-landscape.jpg');
-    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url('img/bg-landscape.jpg');
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.75)), url('img/bg-landscape.jpg');
-  }
 
   .circle-gradient {
     height: 215px;
@@ -206,7 +202,21 @@ h1 {
   }
 
   h1 {
-    font-size: 25px;
+    font-size: 26px;
+    padding: 15px 0;
+  }
+
+  .main {
+    background-image: -webkit-gradient(linear,
+        left bottom,
+        left top,
+        from(rgba(0, 0, 0, 0)),
+        to(rgba(0, 0, 0, 1))),
+      url('img/bg-landscape.jpg');
+    background-image: linear-gradient(0deg,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 1)),
+      url('img/bg-landscape.jpg');
   }
 
   .pointer {
@@ -224,7 +234,7 @@ h1 {
     /* centered to gradien-circle */
   }
 
-  #text{
+  #text {
     font-size: 16px;
   }
 }
