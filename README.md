@@ -8,9 +8,9 @@ project that I had worked along with. I switched up a few things like the color 
 desktop and mobile,
 the inhale/exhale timing and the overall page layout. It's a nice little breathing exercise.
 
-I also added responsive media queries for mobile screen sizes.
+I also added a media query for mobile screen sizes to take on the go.
 
-- Visit : **[Just Breathe Meditation App](https://naynayren.github.io/inhale-exhale/)**
+- Visit : **[Just Breathe...](https://naynayren.github.io/inhale-exhale/)**
 
 <p align="center">
     <img src="img/logo.png" alt="My Logo" width="153" height="100" />
